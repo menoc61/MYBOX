@@ -171,7 +171,7 @@ const Faq = () => {
             <div className="mt-4">
               <p className="text-base text-gray-500">
                 You can contact our customer support team by emailing us at
-                support@myecommercestore.com, or by calling us at (555) 123-4567
+                support@THEBOX.com, or by calling us at (237)693972665
                 between the hours of 9am and 5pm EST, Monday through Friday.
               </p>
             </div>

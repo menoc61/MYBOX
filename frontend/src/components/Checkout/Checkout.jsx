@@ -124,7 +124,7 @@ const CartData = () => {
     <div className="w-full bg-[#fff] rounded-md p-5 pb-8">
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
-        <h5 className="text-[18px] font-[600]">$2610.00</h5>
+        <h5 className="text-[18px] font-[600]">2610.00FCFA</h5>
       </div>
       <br />
       <div className="flex justify-between">
@@ -136,7 +136,7 @@ const CartData = () => {
         <h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
         <h5 className="text-[18px] font-[600]">-</h5>
       </div>
-      <h5 className="text-[18px] font-[600] text-end pt-3">$2610.00</h5>
+      <h5 className="text-[18px] font-[600] text-end pt-3">2610.00FCFA</h5>
       <br />
       <form>
         <input

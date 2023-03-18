@@ -17,7 +17,7 @@ const ProfileContent = ({ active }) => {
   const [name, setName] = useState(user && user.name);
   const [email, setEmail] = useState(user && user.email);
   const [phoneNumber, setPhoneNumber] = useState();
-
+  const [zipCode, setZipCode] = useState();
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
 
@@ -80,7 +80,16 @@ const ProfileContent = ({ active }) => {
                     onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
-
+                <div className=" w-[100%] 800px:w-[50%]">
+                  <label className="block pb-2">Zip Code</label>
+                  <input
+                    type="number"
+                    className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
+                    required
+                    value={zipCode}
+                    onChange={(e) => setZipCode(e.target.value)}
+                  />
+                </div>
               </div>
 
               <div className="w-full 800px:flex block pb-3">
@@ -226,7 +235,7 @@ const AllOrders = () => {
       row.push({
         id: item._id,
         itemsQty: item.orderItems.length,
-        total: "US$ " + item.totalPrice,
+        total:  item.totalPrice + "FCFA",
         status: item.orderStatus,
       });
     });
@@ -316,7 +325,7 @@ const AllRefundOrders = () => {
       row.push({
         id: item._id,
         itemsQty: item.orderItems.length,
-        total: "US$ " + item.totalPrice,
+        total:  item.totalPrice + "FCFA",
         status: item.orderStatus,
       });
     });
@@ -404,7 +413,7 @@ const TrackOrder = () => {
       row.push({
         id: item._id,
         itemsQty: item.orderItems.length,
-        total: "US$ " + item.totalPrice,
+        total: `${item.totalPrice} FCFA`,
         status: item.orderStatus,
       });
     });
