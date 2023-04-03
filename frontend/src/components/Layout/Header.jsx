@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
-import { categoriesData, productData } from "../../static/data";
+import { categoriesData } from "../../static/data";
 import {
   AiOutlineHeart,
   AiOutlineSearch,
@@ -20,6 +20,7 @@ import { RxCross1 } from "react-icons/rx";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
+  const {allProducts} = useSelector((state) => state.products);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
@@ -32,7 +33,7 @@ const Header = ({ activeHeading }) => {
     const term = e.target.value;
     setSearchTerm(term);
 
-    const filteredProducts = productData.filter((product) =>
+    const filteredProducts = allProducts && allProducts.filter((product) =>
       product.name.toLowerCase().includes(term.toLowerCase())
     );
     setSearchData(filteredProducts);
@@ -65,7 +66,7 @@ const Header = ({ activeHeading }) => {
               placeholder="Search Product..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
+              className="h-[40px] w-full px-2 border-[#39bbdb] border-[2px] rounded-md"
             />
             <AiOutlineSearch
               size={30}
@@ -82,7 +83,7 @@ const Header = ({ activeHeading }) => {
                       <Link to={`/product/${Product_name}`}>
                         <div className="w-full flex items-start-py-3">
                           <img
-                            src={i.image_Url[0].url}
+                            src={`${backend_url}${i.images[0]}`}
                             alt=""
                             className="w-[40px] h-[40px] mr-[10px]"
                           />
@@ -98,7 +99,7 @@ const Header = ({ activeHeading }) => {
           <div className={`${styles.button}`}>
             <Link to="/shop-create">
               <h1 className="text-[#fff] flex items-center">
-                OWN YOUR BOX <IoIosArrowForward className="ml-1" />
+                Become Seller <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
           </div>
@@ -256,7 +257,7 @@ const Header = ({ activeHeading }) => {
                 <input
                   type="search"
                   placeholder="Search Product..."
-                  className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
+                  className="h-[40px] w-full px-2 border-[#39bbdb] border-[2px] rounded-md"
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />

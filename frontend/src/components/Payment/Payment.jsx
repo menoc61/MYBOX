@@ -172,7 +172,7 @@ const CartData = () => {
       <form>
         <input
           type="text"
-          className={`{styles.input} h-[40px] pl-2`}
+          className={`${styles.input} h-[40px] pl-2`}
           placeholder="Coupoun code"
           required
         />
