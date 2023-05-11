@@ -27,7 +27,7 @@ export const navItems = [
     {
       id: 1,
       title: "Free Shipping",
-      Description: "From all orders over 10000FCFA",
+      Description: "From all orders over 100$",
       icon: (
         <svg
           width="36"
@@ -229,7 +229,7 @@ export const navItems = [
       title: "Gifts",
       subTitle: "",
       image_Url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT37t7ElG9eRy5HUxDVQz2zkJ7XfrlyRjYw1jYgL_-JwQ&s",
+        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
     },
     {
       id: 7,
