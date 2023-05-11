@@ -1,18 +1,93 @@
-##_**DISCLAIMER**_
-This project has moved maintainers and is no longer developed here. The up to date template can be found [here](https://github.com/rennemannd/MERN-Template).
-
 #### _**IMPORTANT NOTE**_ - 
 This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
 - local development: create a config file (make sure to name it config.js) in the config folder, which exports your db.uri connection. An example is provided, config/config.example.js. This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
 - production: Since the config file is not pushed when you deploy your app, you must specifiy your db uri in heorku. Set the uri in heroku as specified in [this](https://devcenter.heroku.com/articles/config-vars) resource. Make sure you name the environement variable "DB_URI".
 
-## Getting Started
-This repository aims to assist you in beginning work on a MERN stack application with a solid file structure as a foundation. To get started make a copy of this template repo for your project teams.
+# Welcome to our MERN stack Multi Vendor Ecommerce startup!
+## THE BOX
 
-Since this project will hold both the client application and the server application there will be node modules in two different places. First run `npm install` from the root. After this you will run `npm run-script install-all` from the root. From now on run this command anytime you want to install all modules again. This is a script we have defined in package.json .
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-This app can be deployed directly to heroku since there is a script defined in package.json which will automatically handle building and deploying the app. For more information on deploying to heroku reference the extra resources at the bottom of this file. 
+## Description
 
+We are excited to introduce you to our project which utilizes the power of MERN stack and other latest technologies like Tailwind CSS, Socket IO, and Redux Toolkit. Our startup is focused on creating a multi-vendor ecommerce platform that will revolutionize the way business is done in Cameroon.
+
+## Documentation
+
+Our project is well-documented, making it easy for new developers to get started quickly. We have provided detailed instructions on how to set up the project locally and how to deploy it to a production environment. Our documentation also includes information on the architecture of the project, the technologies used, and the best practices we follow.
+
+## MERN Stack
+
+MERN stack stands for MongoDB, Express, React, and Node.js. It is a popular full-stack JavaScript framework that allows developers to build web applications easily. Our project utilizes MERN stack, which means that we have used MongoDB for our database, Express for our backend, React for our frontend, and Node.js for our server.
+
+## Tailwind CSS
+
+Tailwind CSS is a utility-first CSS framework that allows developers to create custom designs quickly. It provides a set of pre-defined CSS classes that can be used to style HTML elements. Our project utilizes Tailwind CSS for styling our frontend components.
+
+## Socket IO
+
+Socket IO is a library that enables real-time, bidirectional communication between clients and servers. It allows for the creation of applications that require real-time updates, such as chat applications or multiplayer games. Our project utilizes Socket IO to provide real-time updates to users.
+
+## Redux Toolkit
+
+Redux Toolkit is a set of utilities that simplifies the process of using Redux for state management. It provides a set of pre-defined functions that can be used to create Redux stores, reducers, and actions. Our project utilizes Redux Toolkit to manage the state of our application.
+
+## Our Ecommerce App
+
+Our multi-vendor ecommerce app is designed to enable vendors to sell their products to customers on a single platform. Customers can browse through various products from different vendors, add them to their cart, and checkout with ease. Vendors can manage their products, orders, and payments through a simple and intuitive interface.
+
+## Installation
+
+To get started with our project, please follow the steps below:
+
+1. Clone the repository from GitHub:
+
+   ```bash
+   git clone https://github.com/menoc61/MYBOX.git
+   ```
+
+2. Install the dependencies:
+
+   ````bash
+   cd frontend
+   npm install --force
+
+   cd socket
+   npm install
+
+   cd backend
+   npm install --force
+   ```
+
+3. Create a .env file in the root directory of the project and add the following variables:
+
+   ````env
+    PORT = 8000
+    DB_URL = "mongodb+srv://gillemomeni:blBL5N5Q6zCsWtKI@mybox.dctyhgg.mongodb.net/test"
+    JWT_SECRET_KEY = "dfbkjgflseiia3948943954wfsdchsgfuw#%#%"
+    JWT_EXPIRES = 7d
+    ACTIVATION_SECRET = "hfskjdweuiwe093$wew$@%W!Edfonoddfi"
+    SMPT_HOST = smtp.gmail.com
+    SMPT_PORT = 465
+    SMPT_PASSWORD = luwuxzhmryxoyozm
+    SMPT_MAIL = gillemomeni@gmail.com
+    STRIPE_API_KEY = "pk_test_51N4aYAEyMWxnsaof9c655hsknea6NtcTUP8p5sahjXAVzmXK2DTYgJK5ONpMiiH5qlO1U0dTQ2FXDokbgwPRTuOd00lRZZFLgO"
+    STRIPE_SECRET_KEY = "sk_test_51N4aYAEyMWxnsaof2Voi8c0IQt5zYfRZfb52aOuQJwN8GOAOC7QiPsSF5JtncD7SXgJ7FWYwgySBP4WSziSeR0Sx00iU3EFyjW"
+
+   ```
+
+   *Note: Replace `SMPT_MAIL,SMPT_PASSWORD ` and `STRIPE_API_KEY,STRIPE_SECRET_KEY` with your own values.*
+
+4. Start the development server in the backend/configuration directory:
+
+   ````bash
+   npm run dev
+   ```
+
+5. Open your browser and visit http://localhost:3000 to see the application running.
+
+
+Please make sure to keep your .env file private and never commit it to version control.
 ## File structure
 #### `client` - Holds the client application
 - #### `public` - This holds all of our static files
@@ -35,45 +110,15 @@ This app can be deployed directly to heroku since there is a script defined in p
 #### `README` - This file!
 
 
-## Available Scripts
+## Contributing
 
-In the project directory, you can run:
-
-### `npm run-script dev`
-
-Runs both the client app and the server app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view the client in the browser.
-
-### `npm run-script client`
-
-Runs just the client app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view the client in the browser.
+- This project has been think by the club iai dev 2022-2023 and design by myself `Gilles Momeni`
 
 
-### `npm run-script server`
+## License
 
-Runs just the server in development mode.<br>
+This project is not yet licensed but will be lather put under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+## Questions
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-If deploying to heroku this does not need to be run since it is handled by the heroku-postbuild script<br>
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn how to setup a local MongoDB instance for testing, check out how to [Connect to MongoDB](https://docs.mongodb.com/guides/server/drivers/).
-
-To learn how to deploy a full-stack web app to heroku, check out [this great guide](https://daveceddia.com/deploy-react-express-app-heroku/).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you have any questions, please [contact me](mailto:gillemomeni@gmail.com) or visit my [GitHub profile](https://github.com/menoc61).
